@@ -25,6 +25,8 @@ class ReActAgent:
     def _parse_action(self, action_text: str):
         """解析Action字符串，提取工具名称和输入。
         """
+       
+        
         match = re.match(r"(\w+)\[(.*)\]", action_text, re.DOTALL)
         if match:
             return match.group(1), match.group(2)
