@@ -12,7 +12,7 @@ class ToolExecutor:
         if name in self.tools:
             print("工具已经存在了")
         self.tools[name] = {"description":description,"func":func}
-        print(f"工具‘{name}’已注册")                        
+        print(f"工具‘{name}’已注册")
 
     def gettool(self,name:str) -> callable:
         return self.tools.get(name,{}).get("func")
